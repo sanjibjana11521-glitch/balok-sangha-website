@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Balok Sangha Kali Puja 2026. Join us for devotion, culture and togetherness.">
+    <title>Balok Sangha | Kali Puja 2026</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header class="site-header">
+    <a class="brand" href="/">
+        <img th:src="@{/images/balok-sangha-logo.jpeg}" alt="Balok Sangha club logo">
+        <span><strong>বালক সংঘ</strong><small>BALOK SANGHA</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#puja">Kali Puja</a>
+        <a href="/members">Members</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+        <p class="eyebrow">A celebration of devotion & togetherness</p>
+        <h1>শুভ কালীপুজো</h1>
+        <h2>BALOK SANGHA</h2>
+        <p class="hero-date">KALI PUJA · 8 NOVEMBER 2026</p>
+        <p class="hero-copy">With faith in our hearts and unity in our community, we welcome you to celebrate with us.</p>
+        <div class="hero-actions">
+            <a class="btn btn-gold" href="/members">Meet Our Members</a>
+            <a class="btn btn-outline" href="#puja">Puja Details</a>
+        </div>
+    </div>
+</section>
+
+<section class="stats-wrap" aria-label="Club website statistics">
+    <div class="stat-card">
+        <span class="stat-icon">👁</span>
+        <div><strong th:text="${visitorCount}">0</strong><small>Total Website Visits</small></div>
+    </div>
+    <div class="stat-card">
+        <span class="stat-icon">🤝</span>
+        <div><strong th:text="${memberCount}">0</strong><small>Listed Club Members</small></div>
+    </div>
+    <div class="stat-card">
+        <span class="stat-icon">🪔</span>
+        <div><strong>08 NOV</strong><small>Kali Puja 2026</small></div>
+    </div>
+</section>
+
+<section class="section about-section" id="about">
+    <div class="section-heading">
+        <span class="eyebrow">WHO WE ARE</span>
+        <h2>About <em>Balok Sangha</em></h2>
+        <div class="heading-line"></div>
+    </div>
+    <p class="section-text">Balok Sangha is a community united by friendship, culture and devotion. Through our celebrations and social activities, we aim to bring people together and keep our traditions alive.</p>
+    <div class="about-highlight">একতা · ঐতিহ্য · সম্প্রীতি</div>
+</section>
+
+<section class="puja-section" id="puja">
+    <div class="puja-inner">
+        <div class="section-heading light">
+            <span class="eyebrow">SAVE THE DATE</span>
+            <h2>Kali Puja <em>2026</em></h2>
+            <div class="heading-line"></div>
+        </div>
+        <p class="puja-date">Sunday, 8 November 2026</p>
+        <p class="section-text light-text">We warmly invite everyone to join the celebration and seek the blessings of Maa Kali.</p>
+        <div class="countdown" id="countdown" aria-live="polite">
+            <div><strong id="days">--</strong><small>Days</small></div>
+            <div><strong id="hours">--</strong><small>Hours</small></div>
+            <div><strong id="minutes">--</strong><small>Minutes</small></div>
+            <div><strong id="seconds">--</strong><small>Seconds</small></div>
+        </div>
+        <p class="countdown-note" id="countdownNote">Countdown to our celebration</p>
+        <button class="btn btn-gold schedule-toggle" id="showScheduleBtn"
+                type="button" aria-expanded="false" aria-controls="pujaSchedule">
+            অনুষ্ঠানসূচি দেখুন <span aria-hidden="true">↓</span>
+        </button>
+    </div>
+</section>
+
+
+<section class="schedule-section" id="pujaSchedule" hidden>
+    <div class="section-heading">
+        <span class="eyebrow">BALOK SANGHA · KALI PUJA 2026</span>
+        <h2>পূজার <em>অনুষ্ঠানসূচি</em></h2>
+        <div class="heading-line"></div>
+    </div>
+    <p class="section-text">দহদয়া বালক সংঘের পক্ষ থেকে সকলকে আন্তরিক আমন্ত্রণ।</p>
+
+    <div class="schedule-list">
+        <article class="schedule-card">
+            <div class="schedule-date"><strong>০৮ নভেম্বর ২০২৬</strong><span>রবিবার · ২১শে কার্তিক, ১৪৩৩</span></div>
+            <div class="schedule-content">
+                <h3>শ্রীশ্রী কালিমাতার পূজার্চনা</h3>
+                <p><strong>রাত ৮টা:</strong> শ্রীশ্রী কালিমাতার ঘটোত্তোলন ও পূজার্চনা।</p>
+                <p><strong>রাত ৯টা:</strong> কালী মাতার মঙ্গলগান ও অতিথি আপ্যায়ন।</p>
+            </div>
+        </article>
+
+        <article class="schedule-card">
+            <div class="schedule-date"><strong>০৯ নভেম্বর ২০২৬</strong><span>সোমবার · ২২শে কার্তিক, ১৪৩৩</span></div>
+            <div class="schedule-content">
+                <h3>সাংস্কৃতিক অনুষ্ঠান ও ক্রীড়া</h3>
+                <p><strong>সন্ধ্যা ৫টা:</strong> সাংস্কৃতিক অনুষ্ঠান, ক্রীড়া প্রতিযোগিতা ও অতিথি আপ্যায়ন।</p>
+            </div>
+        </article>
+
+        <article class="schedule-card">
+            <div class="schedule-date"><strong>১০ নভেম্বর ২০২৬</strong><span>মঙ্গলবার · ২৩শে কার্তিক, ১৪৩৩</span></div>
+            <div class="schedule-content">
+                <h3>প্রসাদ বিতরণ ও প্রতিমা নিরঞ্জন</h3>
+                <p><strong>সন্ধ্যা ৫টা:</strong> খিচুড়ি প্রসাদ বিতরণ ও আতসবাজি প্রদর্শন সহ মায়ের প্রতিমা নিরঞ্জন।</p>
+            </div>
+        </article>
+    </div>
+
+    <div class="donation-note">
+        <h3>মায়ের মন্দির নির্মাণে সহযোগিতার আবেদন</h3>
+        <p>মায়ের মন্দির নির্মাণ কাজে মুক্ত হস্তে দান করে সহযোগিতা করুন।</p>
+    </div>
+    <p class="schedule-disclaimer">বিশেষ দ্রষ্টব্য: প্রয়োজনবোধে অনুষ্ঠান সূচির পরিবর্তন হতে পারে।</p>
+    <div class="poster-preview">
+        <h3>অনুষ্ঠানের আমন্ত্রণপত্র</h3>
+        <img src="/images/puja-anusthan-suchi.jpeg" alt="Balok Sangha Kali Puja 2026 invitation and programme schedule poster">
+    </div>
+</section>
+
+<section class="section members-section">
+    <div class="section-heading">
+        <span class="eyebrow">THE PEOPLE BEHIND THE CELEBRATION</span>
+        <h2>Our Club <em>Members</em></h2>
+        <div class="heading-line"></div>
+    </div>
+    <p class="section-text">Our members work together to make every celebration special. Click below to see the member list.</p>
+    <a class="btn btn-red" href="/members">View All Members <span aria-hidden="true">→</span></a>
+</section>
+
+<section class="contact-section" id="contact">
+    <div class="section-heading light">
+        <span class="eyebrow">COME CELEBRATE WITH US</span>
+        <h2>Visit <em>Balok Sangha</em></h2>
+        <div class="heading-line"></div>
+    </div>
+    <p class="contact-address">Purba Medinipur, West Bengal, PIN – 721441</p>
+    <div class="contact-details">
+        <p><strong>Contact the club</strong></p>
+        <a href="tel:+919641744952">+91 96417 44952</a>
+        <a href="tel:+918972468381">+91 89724 68381</a>
+        <a href="tel:+918250376319">+91 82503 76319</a>
+    </div>
+    <p class="contact-note">For the exact puja venue, please contact the club committee.</p>
+    <a class="btn btn-gold" href="https://www.facebook.com/share/1KAKdUVwAN/" target="_blank" rel="noopener noreferrer">Visit our Facebook page ↗</a>
+</section>
+</main>
+
+<footer>
+    <img th:src="@{/images/balok-sangha-logo.jpeg}" alt="" class="footer-logo">
+    <strong>বালক সংঘ · BALOK SANGHA</strong>
+    <p>Celebrating faith, friendship and togetherness.</p>
+    <small>© 2026 Balok Sangha. All rights reserved.</small>
+</footer>
+<script th:src="@{/js/site.js}"></script>
+</body>
+</html>

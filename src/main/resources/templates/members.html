@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Members | Balok Sangha</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="members-page">
+<header class="site-header">
+    <a class="brand" href="/">
+        <img th:src="@{/images/balok-sangha-logo.jpeg}" alt="Balok Sangha club logo">
+        <span><strong>বালক সংঘ</strong><small>BALOK SANGHA</small></span>
+    </a>
+    <a class="back-link" href="/">← Back to Home</a>
+</header>
+<main class="members-main">
+    <div class="section-heading">
+        <span class="eyebrow">OUR COMMUNITY</span>
+        <h1>Our Club <em>Members</em></h1>
+        <div class="heading-line"></div>
+    </div>
+    <p class="section-text">The people who come together to make Balok Sangha special.</p>
+
+    <div class="member-count">
+        Total Members: <strong th:text="${#lists.size(members)}">0</strong>
+    </div>
+
+    <div th:if="${#lists.isEmpty(members)}" class="empty-members">
+        <span>🤝</span>
+        <h2>Members list is being prepared</h2>
+        <p>The club members' names will appear here after the committee list is added.</p>
+        <a class="btn btn-red" href="/">Return to Home</a>
+    </div>
+
+    <div class="member-grid" th:if="${!#lists.isEmpty(members)}">
+        <article class="member-card" th:each="member, status : ${members}">
+            <span class="member-number" th:text="${status.count}">1</span>
+            <div>
+                <h2 th:text="${member.name}">Member Name</h2>
+                <p th:if="${member.role != null and !#strings.isEmpty(member.role)}" th:text="${member.role}">Role</p>
+            </div>
+        </article>
+    </div>
+</main>
+<footer>
+    <strong>বালক সংঘ · BALOK SANGHA</strong>
+    <p>© 2026 Balok Sangha. All rights reserved.</p>
+</footer>
+</body>
+</html>
