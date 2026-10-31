@@ -23,7 +23,7 @@ public class VisitCounterService {
                 // MySQL atomic upsert prevents lost increments during simultaneous visits.
                 session.createNativeMutationQuery(
                     "INSERT INTO site_visit_counter (id, total_visits) VALUES (1, 1) " +
-                    "ON DUPLICATE KEY UPDATE total_visits = total_visits + 1"
+"ON CONFLICT (id) DO UPDATE SET total_visits = site_visit_counter.total_visits + 1"
                 ).executeUpdate();
 
                 VisitCounter counter = session.get(VisitCounter.class, 1L);
